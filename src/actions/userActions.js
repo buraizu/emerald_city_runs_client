@@ -29,7 +29,7 @@ export const signup = (user) => {
     return fetch(`https://emerald-city-runs-api.herokuapp.com/api/users`, {
       method: "POST",
       headers: {
-
+        "Accept":"application/json",
         "Content-Type":"application/json"
       },
       body: JSON.stringify({user: user})
@@ -53,10 +53,10 @@ export const authenticate = (credentials) => {
     return fetch(`https://emerald-city-runs-api.herokuapp.com/api/users`, {
       method: "POST",
       headers: {
-      
+        "Accept":"application/json",
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({auth: credentials})
+      body: JSON.stringify({user: credentials})
     })
       .then(res => res.json())
       .then((response) => {
