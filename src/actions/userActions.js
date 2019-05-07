@@ -53,6 +53,7 @@ export const authenticate = (credentials) => {
     return fetch(`https://emerald-city-runs-api.herokuapp.com/api/users`, {
       method: "POST",
       headers: {
+        "Accept":"application/json",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({auth: credentials})
