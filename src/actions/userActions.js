@@ -50,13 +50,12 @@ export const signup = (user) => {
 export const authenticate = (credentials) => {
   return dispatch => {
     dispatch(authRequest())
-    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/users`, {
+    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/user_token`, {
       method: "POST",
       headers: {
-        "Accept":"application/json",
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({user: credentials})
+      body: JSON.stringify({auth: credentials})
     })
       .then(res => res.json())
       .then((response) => {
