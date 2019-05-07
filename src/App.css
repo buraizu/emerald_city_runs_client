@@ -1,3 +1,11 @@
+html {
+  background: url('/milkovi.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .App {
   text-align: center;
 }
@@ -30,4 +38,66 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* .background {
+  background-image: url('/milkovi.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+
+/* .background {
+  background: url(/milkovi.jpg) no-repeat center center fixed;
+  background-size: cover;
+
+} */
+
+.feature {
+  background-color: rgb(244, 244, 244, .85);
+  padding: 10px;
+  margin: 5px;
+  border: 3px solid #067f2e;
+  border-radius: 10px;
+}
+
+.displayText {
+  color: rgb(237, 252, 242);
+}
+
+.largeText {
+  font-size: 2rem;
+}
+
+.navLink {
+  display: inline;
+  margin: 25px;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.wrapper {
+  background: url('/milkovi.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.eventsContainer {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.event-feature {
+  float: left;
+  width: 31%;
+  height: 275px;
 }
