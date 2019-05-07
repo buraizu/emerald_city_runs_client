@@ -7,7 +7,7 @@ export const fetchRuns = () => {
   }
   return (dispatch) => {
     dispatch({ type: 'LOADING_RUNS'});
-    return fetch('/api/runs', data)
+    return fetch("https://emerald-city-runs-api.herokuapp.com/api/runs", data)
       .then(response => response.json())
       .then(responseJson => {
         dispatch({ type: 'FETCH_RUNS', payload: responseJson })
@@ -27,7 +27,7 @@ export const postRun = (run) => {
   }
 
   return function(dispatch) {
-    return fetch('/api/runs', data)
+    return fetch("https://emerald-city-runs-api.herokuapp.com/api/runs", data)
       .then(response => response.json())
       .then(responseJson => {
         dispatch({ type: 'ADD_RUN', run: responseJson})
@@ -48,7 +48,7 @@ export const updateRun = (run) => {
   }
 
   return function(dispatch) {
-    return fetch(`/api/runs/${runId}`, data)
+    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/runs/${runId}`, data)
       .then(response => response.json())
       .then(responseJson => {
         dispatch({type: 'UPDATE_RUN', run: responseJson})
@@ -63,7 +63,7 @@ export const deleteRun = (run) => {
   }
 
   return function(dispatch) {
-    return fetch(`/api/runs/${run.id}`, data)
+    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/runs/${run.id}`, data)
       .then(dispatch({type: 'DELETE_RUN', run: run}))
     }
 }

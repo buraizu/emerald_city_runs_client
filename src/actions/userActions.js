@@ -26,7 +26,7 @@ const authFailure = (errors) => {
 export const signup = (user) => {
   const newUser = user
   return dispatch => {
-    return fetch(`/api/users`, {
+    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/users`, {
       method: "POST",
       headers: {
         "Accept":"application/json",
@@ -50,7 +50,7 @@ export const signup = (user) => {
 export const authenticate = (credentials) => {
   return dispatch => {
     dispatch(authRequest())
-    return fetch(`api/user_token`, {
+    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -75,7 +75,7 @@ export const authenticate = (credentials) => {
 }
 
 export const getUser = (credentials) => {
-  const request = new Request(`/api/find_user`, {
+  const request = new Request(`https://emerald-city-runs-api.herokuapp.com/api/find_user`, {
     method: "POST",
     headers: new Headers({
       "Content-Type": "application/json",

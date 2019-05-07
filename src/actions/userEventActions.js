@@ -7,7 +7,7 @@ export const fetchUserEvents = () => {
   }
   return (dispatch) => {
     dispatch({ type: 'LOADING_USER_EVENTS'});
-    return fetch('/api/user_events', data)
+    return fetch('https://emerald-city-runs-api.herokuapp.com/api/user_events', data)
       .then(response => response.json())
       .then(responseJson => {
         dispatch({ type: 'FETCH_USER_EVENTS', payload: responseJson })
@@ -27,7 +27,7 @@ export const setEvent = (event) => {
     body: JSON.stringify(event)
   }
   return function(dispatch) {
-    return fetch(`/api/user_events`, data)
+    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/user_events`, data)
       .then(response => response.json())
       .then(responseJson => {
         dispatch({type: 'ADD_USER_EVENT', userEvent: responseJson})
@@ -59,7 +59,7 @@ export const setGoal = (userEvent) => {
   }
 
   return function(dispatch) {
-    return fetch(`/api/user_events/${userEventId}`, data)
+    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/${userEventId}`, data)
       .then(response => response.json())
       .then(responseJson => {
         dispatch({type: 'UPDATE_USER_EVENT', userEvent: responseJson})
@@ -74,7 +74,7 @@ export const deleteUserEvent = (userEvent) => {
   }
 
   return function(dispatch) {
-    return fetch(`/api/user_events/${userEvent.id}`, data)
+    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/${userEvent.id}`, data)
       .then(dispatch({type: 'DELETE_USER_EVENT', userEvent: userEvent}))
     }
 }
