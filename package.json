@@ -16,9 +16,7 @@
     "deploy": "npm run build && mv build/index.html build/200.html && surge build"
   },
   "proxy": {
-    "/api": {
-      "target": "http://localhost:3001"
-    }
+    "/api": "http://localhost:3001"
   },
   "eslintConfig": {
     "extends": "react-app"
