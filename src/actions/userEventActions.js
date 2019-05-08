@@ -59,7 +59,7 @@ export const setGoal = (userEvent) => {
   }
 
   return function(dispatch) {
-    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/${userEventId}`, data)
+    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/user_events/${userEventId}`, data)
       .then(response => response.json())
       .then(responseJson => {
         dispatch({type: 'UPDATE_USER_EVENT', userEvent: responseJson})
@@ -74,7 +74,7 @@ export const deleteUserEvent = (userEvent) => {
   }
 
   return function(dispatch) {
-    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/${userEvent.id}`, data)
+    return fetch(`https://emerald-city-runs-api.herokuapp.com/api/user_events/${userEvent.id}`, data)
       .then(dispatch({type: 'DELETE_USER_EVENT', userEvent: userEvent}))
     }
 }
