@@ -56,7 +56,7 @@ class UserEventDetail extends Component {
     let userEvent = this.state.userEvent;
     let currentDate = new Date();
     let userEventDate = new Date(this.props.userEvent.date)
-    let buttonText = (currentDate < userEventDate ? "set goal" : "result")
+    let buttonText = (currentDate < userEventDate ? "Set Goal" : "Result")
     let pastEventText = (userEvent) => {
       return userEvent.result ? `Your result: ${userEvent.result}` : `-- No result entered --`
     }
@@ -97,11 +97,11 @@ class UserEventDetail extends Component {
           <h3>Your Event Details</h3>
           <h4>{this.props.userEvent.title}</h4>
           <p>Date: {this.props.userEvent.date}</p>
-          <p><a href={this.props.userEvent.url} target="_blank" rel="noopener noreferrer">Event Home Page</a></p>
           <p>{goalOrResultText}</p>
           <button onClick={this.toggleEdit}>{buttonText}</button>
-          <button onClick={this.deleteUserEvent}>delete this event</button>
+          <button onClick={this.deleteUserEvent}>Delete This Event</button>
           <p><Link to={'/user_events'}>Back to My Events</Link><span> --- <Link to={'/user_profile'}>My Profile</Link></span></p>
+          <img className="active-icon" src={'/A-icon.png'}  alt="" />
         </div>
       </Col>
     )

@@ -9,11 +9,6 @@ class EditUserEventForm extends Component {
         <h3>Event Details</h3>
         <h4>Title: {this.props.userEvent.title}</h4>
         <p>Date: {this.props.userEvent.date}</p>
-        <p>
-          <a href={this.props.userEvent.url} target="_blank" rel="noopener noreferrer">
-              <span> {this.props.userEvent.title}</span>
-          </a>
-        </p>
         <h3>Set your goal</h3>
         <form onSubmit={this.props.saveUserEvent}>
           <span>Goal: </span>
@@ -30,6 +25,7 @@ class EditUserEventForm extends Component {
             value={this.props.saving ? 'Saving...' : 'Save'}
           />
         </form>
+        <img className="active-icon" src={'/A-icon.png'}  alt="" />
       </div>
     )
   }

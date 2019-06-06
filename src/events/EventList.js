@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EventDetail from './EventDetail';
 
+
 const EventList = (props) => {
 
   const displayEvents = props.runEvents.events.map((event, index) => {
@@ -12,7 +13,7 @@ const EventList = (props) => {
 
   return (
     <div>
-      <ul className="displayEvents">
+      <ul>
         {displayEvents}
       </ul>
     </div>

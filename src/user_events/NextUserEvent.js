@@ -30,14 +30,19 @@ const NextUserEvent = ({userEvents}) => {
 
   if(nextUserEvent) {
     return (
-      <div className="feature">
+      <div className="feature icon-fix">
         <h2>Your next event</h2>
         <h4>{nextUserEvent.title}</h4>
         <p>{nextUserEvent.date}</p>
         <p>Only {daysRemaining()} days until your event!</p>
         <p>{goalText}</p>
-        <p><a href={nextUserEvent.url} target="_blank" rel="noopener noreferrer">Event Home Page</a></p>
-        <p><Link to={'/user_events/' + nextUserEvent.id}>Details</Link></p>
+        <p>
+          <a href={nextUserEvent.url} target="_blank" rel="noopener noreferrer">
+            <img src={'/btn_gray.png'}  alt="" />
+          </a>
+          <img className="active-icon" src={'/A-icon.png'}  alt="" />
+        </p>
+        <p><Link to={'/user_events/' + nextUserEvent.id}>Update Goal</Link></p>
       </div>
     )
   } else {

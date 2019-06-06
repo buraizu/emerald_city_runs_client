@@ -12,13 +12,6 @@ class EventDetail extends Component {
       runEvent: this.props.event
     }
     this.setUserEvent = this.setUserEvent.bind(this);
-    this.toggleFeatured = this.toggleFeatured.bind(this);
-  }
-
-  toggleFeatured() {
-    const runEvent = this.state.runEvent;
-    runEvent["featured"] = true;
-    return this.setState({runEvent: runEvent})
   }
 
   setUserEvent() {
@@ -38,12 +31,14 @@ class EventDetail extends Component {
         <h3>{this.props.runEvent.title}</h3>
         <p>Date: {this.props.runEvent.date}</p>
         <p>
-          Event Home Page:
           <a href={this.props.runEvent.url} target="_blank" rel="noopener noreferrer">
-            <span> {this.props.runEvent.title}</span>
+            <img src={'/btn_gray.png'}  alt="" />
           </a>
         </p>
-        <button onClick={this.setUserEvent}>Set your event</button>
+        <p>
+          <button onClick={this.setUserEvent}>Add to My Events</button>
+        </p>
+        <img className="active-icon" src={'/A-icon.png'}  alt="" />
       </div>
     )
   }
