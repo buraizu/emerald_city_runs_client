@@ -10,7 +10,7 @@ const Trophy = ({userEvent}) => {
       <p>Your goal: {userEvent.goal}</p>
       <p>Your result: {userEvent.result}</p>
       <Link to={'/user_events/' + userEvent.id}>Details</Link>
-      <img src={'/A-icon.png'}  alt="" />
+      <img className="active-icon" src={'/A-icon.png'}  alt="" />
     </div>
   )
 
