@@ -28,23 +28,25 @@ class SignUp extends Component {
 
   render() {
     return (
-      <div className="feature">
+      <div className="feature login">
         <h3>Sign Up</h3>
         <form>
-          <span>Email: </span>
           <input
             type="text"
             onChange={this.handleOnChange}
             name="email"
             value={this.state.email}
+            placeholder="email"
+            className="submissionField"
           />
           <br />
-          <span>Password: </span>
           <input
             type="password"
             onChange={this.handleOnChange}
             name="password"
             value={this.state.password}
+            placeholder="password"
+            className="submissionField"
           />
           <br />
           <input

@@ -18,7 +18,8 @@ class LogIn extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if(this.props.authenticate(this.state)) {
+    const user = this.props.authenticate(this.state)
+      if(user) {
         this.props.history.push('/user_profile')
       } else {
         window.alert("Unable to Log In with provided credentials")
@@ -27,24 +28,25 @@ class LogIn extends Component {
 
   render() {
     return (
-
-        <div className="feature">
+        <div className="feature login">
           <h3>Log In</h3>
           <form>
-            <span>Email: </span>
             <input
               type="text"
               onChange={this.handleOnChange}
               name="email"
               value={this.state.email}
+              placeholder="email"
+              className="submissionField"
             />
             <br />
-            <span>Password: </span>
             <input
               type="password"
               onChange={this.handleOnChange}
               name="password"
               value={this.state.password}
+              placeholder="password"
+              className="submissionField"
             />
             <br />
             <input
@@ -53,7 +55,6 @@ class LogIn extends Component {
             />
           </form>
         </div>
-
     )
   }
 
