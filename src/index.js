@@ -9,6 +9,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers/index.js';
 import { datadogRum } from '@datadog/browser-rum';
+import { datadogLogs } from '@datadog/browser-logs'
 
 datadogRum.init({
   applicationId: 'b50187cf-e2bc-42d9-b6d9-8f2d70225da1',
@@ -20,6 +21,13 @@ datadogRum.init({
   sampleRate: 100,
   trackInteractions: true
 });
+
+datadogLogs.init({
+  clientToken: 'pub372909ff1b6cd41fc18860502de04bfc',
+  site: 'datadoghq.com',
+  forwardErrorsToLogs: true,
+  sampleRate: 100,
+})
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
