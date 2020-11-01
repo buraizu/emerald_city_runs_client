@@ -29,6 +29,8 @@ datadogLogs.init({
   sampleRate: 100,
 })
 
+logger.error (message: "cowabunga custom error", messageContext = Context)
+
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
