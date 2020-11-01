@@ -11,14 +11,14 @@ import rootReducer from './reducers/index.js';
 import { datadogRum } from '@datadog/browser-rum';
 
 datadogRum.init({
-    applicationId: 'b50187cf-e2bc-42d9-b6d9-8f2d70225da1',
-    clientToken: 'pub372909ff1b6cd41fc18860502de04bfc',
-    site: 'datadoghq.com',
-    service: 'ECR-Frontend',
-    env: 'production',
-    version: '1.0.0',
-    sampleRate: 100,
-    trackInteractions: true
+  applicationId: 'b50187cf-e2bc-42d9-b6d9-8f2d70225da1',
+  clientToken: 'pub372909ff1b6cd41fc18860502de04bfc',
+  site: 'datadoghq.com',
+  service: 'ECR-Frontend',
+  env: 'production',
+  version: '1.0.0',
+  sampleRate: 100,
+  trackInteractions: true
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
