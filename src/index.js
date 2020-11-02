@@ -29,6 +29,8 @@ datadogLogs.init({
   sampleRate: 100,
 })
 
+datadogLogs.logger.error('Button clicked', { name: 'cowabunga', id: 123 })
+
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
