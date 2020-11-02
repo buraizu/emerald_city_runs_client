@@ -1,7 +1,9 @@
 import * as types from './actionTypes'
+import { datadogLogs } from '@datadog/browser-logs'
 
 //this function has an authentication request action type
 const authRequest = () => {
+  datadogLogs.logger.info('Authentication request', { name: 'authRequest', location: 'userActions.js' })
   return {
     type: types.AUTHENTICATION_REQUEST
   }
@@ -9,6 +11,7 @@ const authRequest = () => {
 
 //this function has an authentication success action type. When there's a success in correct credentials, the server passes a user and token.
 const authSuccess = (user, token) => {
+  datadogLogs.logger.info('Authentication success', { name: 'authSuccess', location: 'userActions.js' })
   return {
     type: types.AUTHENTICATION_SUCCESS,
     user: user,
@@ -17,6 +20,7 @@ const authSuccess = (user, token) => {
 }
 //this function has an authentication failure action type. When there are incorrect credentials, the server passes errors.
 const authFailure = (errors) => {
+  datadogLogs.logger.info('Authentication failure', { name: 'authFailure', location: 'userActions.js' })
   return {
     type: types.AUTHENTICATION_FAILURE,
     errors: errors
@@ -25,6 +29,7 @@ const authFailure = (errors) => {
 
 export const signup = (user) => {
   const newUser = user
+  datadogLogs.logger.info('New User', { email: newUser.email, location: 'userActions.js' })
   return dispatch => {
     return fetch(`https://emerald-city-runs-api.herokuapp.com/api/users`, {
       method: "POST",
