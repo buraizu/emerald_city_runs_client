@@ -31,8 +31,13 @@ class EventDetail extends Component {
         <h3>{this.props.runEvent.title}</h3>
         <p>Date: {this.props.runEvent.date}</p>
         <p>
-          <a href={this.props.runEvent.url} target="_blank" rel="noopener noreferrer">
+          <a href={this.props.runEvent.home_url} target="_blank" rel="noopener noreferrer">
             <img src={'/btn_gray.png'}  alt="" />
+          </a>
+        </p>
+        <p>
+          <a href={this.props.runEvent.reg_url} target="_blank" rel="noopener noreferrer">
+            Event Home Page
           </a>
         </p>
         <p>
