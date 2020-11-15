@@ -16,7 +16,7 @@ datadogRum.init({
   clientToken: 'pub372909ff1b6cd41fc18860502de04bfc',
   site: 'datadoghq.com',
   service: 'ECR-Frontend',
-  env: 'production',
+  env: 'prod',
   version: '1.0.0',
   sampleRate: 100,
   trackInteractions: true
@@ -27,9 +27,11 @@ datadogLogs.init({
   site: 'datadoghq.com',
   forwardErrorsToLogs: true,
   sampleRate: 100,
+  env: 'prod',
+  service: 'ECR-Frontend'
 })
 
-datadogLogs.logger.error('Button clicked', { name: 'cowabunga', id: 123 })
+datadogLogs.logger.info('App initialized')
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
