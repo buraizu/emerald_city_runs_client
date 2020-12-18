@@ -15,11 +15,12 @@ datadogRum.init({
   applicationId: 'b50187cf-e2bc-42d9-b6d9-8f2d70225da1',
   clientToken: 'pub372909ff1b6cd41fc18860502de04bfc',
   site: 'datadoghq.com',
-  service: 'ECR-Frontend',
+  service: 'emerald-city-runs-fe',
   env: 'prod',
   version: '1.0.0',
   sampleRate: 100,
-  trackInteractions: true
+  trackInteractions: true,
+  allowedTracingOrigins: ["https://emerald-city-runs.surge.sh", "https://emerald-city-runs-api.herokuapp.com/", /https:\/\/.*\.emerald-city-runs\.com/]
 });
 
 datadogLogs.init({
