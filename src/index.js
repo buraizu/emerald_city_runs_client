@@ -19,7 +19,7 @@ datadogRum.init({
   env: 'prod',
   version: '1.0.0',
   sampleRate: 100,
-  trackInteractions: true,
+  trackInteractions: false,
   allowedTracingOrigins: ["https://emerald-city-runs.surge.sh", "https://emerald-city-runs-api.herokuapp.com/", /https:\/\/.*\.emerald-city-runs\.com/]
 });
 
