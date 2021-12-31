@@ -13,11 +13,11 @@ import { datadogLogs } from '@datadog/browser-logs'
 
 datadogRum.init({
   applicationId: 'ec6314e8-31d9-478f-84a5-1721469df2cd',
-  clientToken: 'pubf1e465dac963c400fb6c89a37e677f85',
+  clientToken: 'pubdf639ee847af6b01a21e5672b9da21d2',
   site: 'datadoghq.com',
   service: 'emerald-city-runs-fe',
   env: 'prod',
-  version: '1.0.1',
+  version: '1.0.2',
   sampleRate: 100,
   trackInteractions: true,
   allowedTracingOrigins: ["https://emerald-city-runs.surge.sh", "https://emerald-city-runs-api.herokuapp.com/", /https:\/\/.*\.emerald-city-runs\.com/]
@@ -26,7 +26,7 @@ datadogRum.init({
 datadogRum.startSessionReplayRecording();
 
 datadogLogs.init({
-  clientToken: 'pubdf639ee847af6b01a21e5672b9da21d2',
+  clientToken: 'pub372909ff1b6cd41fc18860502de04bfc',
   site: 'datadoghq.com',
   forwardErrorsToLogs: true,
   sampleRate: 100,
