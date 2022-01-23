@@ -23,7 +23,7 @@ datadogRum.init({
   allowedTracingOrigins: ["https://emerald-city-runs.surge.sh", "https://emerald-city-runs-api.herokuapp.com/", /https:\/\/.*\.emerald-city-runs\.com/]
 });
   
-datadogRum.startSessionReplayRecording();
+
 
 datadogLogs.init({
   clientToken: 'pub372909ff1b6cd41fc18860502de04bfc',
