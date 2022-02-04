@@ -12,19 +12,16 @@ import { datadogRum } from '@datadog/browser-rum';
 import { datadogLogs } from '@datadog/browser-logs'
 
 datadogRum.init({
-  applicationId: 'ec6314e8-31d9-478f-84a5-1721469df2cd',
-  clientToken: 'pubdf639ee847af6b01a21e5672b9da21d2',
+  applicationId: '1114dcf3-47fa-4097-afb5-7e3e0b269803',
+  clientToken: 'pubcb57ecb280484112b43af6db38140e9f',
   site: 'datadoghq.com',
-  service: 'emerald-city-runs-fe',
-  env: 'prod',
-  version: '1.0.2',
+  service:'emerald-city-runs',
+  version: '1.0.3',
   sampleRate: 100,
   trackInteractions: true,
-  allowedTracingOrigins: ["https://emerald-city-runs.surge.sh", "https://emerald-city-runs-api.herokuapp.com/", /https:\/\/.*\.emerald-city-runs\.com/]
+  defaultPrivacyLevel: 'mask-user-input'
 });
   
-
-
 datadogLogs.init({
   clientToken: 'pub372909ff1b6cd41fc18860502de04bfc',
   site: 'datadoghq.com',
